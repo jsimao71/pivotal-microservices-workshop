@@ -1,0 +1,122 @@
+= Course Setup
+
+The following software is required to complete this course:
+
+  * Java JDK 8
+  * An IDE or Editor of your choice
+  * Maven utility: `mvn`
+  * Git command line: `git`
+  * Cloud Foundry CLI `cf`
+  * Curl (Windows users only)
+ 
+Ideally this setup should be completed _before_ you attend the course.
+
+== Note on Lab Usage
+
+Much of this course involves using command line tools rather than GUI
+applications.  This may be unfamiliar to some of you.
+
+In particular, Windows users will need to open and use Command windows. To do this
+press `WK` + `R` and type `cmd` (where WK is the Windows Key).
+
+To keep the labs simple, although we encourage you to use an IDE, we only use it
+for creating and editing files.  In most cases we build using `mvn` directly.
+We accept that this is not typical but it makes the lab instructions simpler.
+
+
+== Java
+
+A Java 8 JDK needs to be installed.  Go to Oracle at
+http://www.oracle.com/technetwork/java/javase/downloads/index.html
+and click the Java download button on the right.  You should be on the page to
+download the "Java SE Development Kit".
+
+Click the radio-button to say you "Accept License Agreement" and then pick the
+right JDK for your platform.  Make sure you are downloading the JDK _not_ the JRE.
+
+Once downloaded, run the installer.  It takes a while to run.
+
+== IDE
+
+We recommend installing the integrated development environment of your choice,
+such as Eclipse, Spring Tool Suite (STS) or IntelliJ.  If you have no preference
+we recommend STS as it has additional support for the Spring facilities used during
+the course.
+
+ * STS: http://spring.io/tools  The download is a zip file, so unpack it somewhere
+convenient.  Windows users are recommended to unpack it directly into `C:\` otherwise
+you will have problems exceeding the maximum path length (yes even on Windows 8 and 10).
++
+Once unpacked you should find a directory similar to `sts_bundle/sts-X.X.X.RELEASE`
+or `sts_bundle/sts-X.X.X.RELEASE-eX.X.X` (the versions will differ).  In here is
+the executable for STS (`STS.exe`, `STS.app` or `STS`).  For convenience, you might
+like to create a shortcut on your Desktop.
+
+ * Eclipse: https://eclipse.org/downloads/  Either use the Installer or choose
+"Eclipse IDE for Java Developers ".
+ 
+ * IntelliJ: https://www.jetbrains.com/idea/download/  The Community Edition is free
+and will be sufficient for this course.
+
+An IDE is not required to do this course, but if you prefer not to use an IDE, you
+will need to use your favorite editor instead.  Windows users are recommended to
+download the free Notepad++s editor from https://notepad-plus-plus.org/download
+
+== Maven
+
+Download Maven from https://maven.apache.org/download.cgi - select the binary zip archive
+(Windows) or the binary tar.gz archive (MacOS, Linux).
+
+Once downloaded, unpack into a convenient directory.
+You need to add the `bin` directory to your execution path.
+
+* Windows - Right click `My Computer`/`This PC` -> `Properties` -> `Advanced system settings` -> `Environment variables` ...
+`PATH` should already exist, click `Edit` and add to the end.  Don't forget to add a semicolon first.
+For more details on how to do this see http://www.computerhope.com/issues/ch000549.htm.
+
+* MacOS, Linux - Assuming you are using a BASH shell, edit `~/.bashrc` and add:
++
+```
+PATH=$PATH:/path/to/maven/bin
+```
+
+You will need to close any existing Terminal/Cmd windows and open a new one for the change to take effect.
+
+== Git Command-Line Utility
+
+Go to https://git-scm.com/downloads, click the image corresponding to your platform, download the installer and run it.
+
+*Warning:* Ignore the large computer monitor labelled "Latest source Release".
+
+* Windows users: When running the installer, select "_Use Git from the Windows Command Prompt_" (this is not the default).
+Accept all other defaults.
+
+== Cloud Foundry Command-Line Utility
+
+Go to https://github.com/cloudfoundry/cli/releases, download and run the right installer for your platform.
+
+== Curl for Windows
+
+Linux and MacOS users already have the `curl` utility.  Windows users can download it from here:
+https://github.com/S2EDU/PCFImmersionStudentFiles/raw/master/curl.zip.
+
+Once downloaded, unpack it somewhere convenient and add to your path - the same procedure as for
+Maven.
+
+== Testing Your Setup
+
+If everything has installed correctly, _open a brand new_ Terminal/Cmd window.  You should be able to run
+the following:
+
+```
+java -version
+mvn -version
+git --version
+cf --version
+curl --version
+```
+
+
+
+
+
